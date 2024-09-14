@@ -1,7 +1,7 @@
 /**
  * Copyright © 2024 Austin Berrio
  *
- * @file test.h
+ * @file include/test.h
  *
  * @brief A simple toolkit for writing test suites.
  * - Readability above all else.
