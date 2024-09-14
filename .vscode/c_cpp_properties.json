@@ -9,7 +9,7 @@
         "${workspaceFolder}/mods/float_is_close/include",
         "${workspaceFolder}/include"
       ],
-      "defines": [],
+      "defines": ["_POSIX_C_SOURCE=199309L"],
       "cStandard": "c17",
       "intelliSenseMode": "linux-gcc-x64",
       "compilerPath": "/usr/bin/gcc"
