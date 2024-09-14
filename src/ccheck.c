@@ -9,7 +9,7 @@
  * - Kept simple at heart.
  */
 
-#include "test.h"
+#include "ccheck.h"
 
 #include <time.h>
 
