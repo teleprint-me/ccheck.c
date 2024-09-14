@@ -4,9 +4,14 @@
 
 ## Features
 
-- Lightweight, no dependencies beyond libc
+- Lightweight, minimal dependencies
 - Simple interface for defining and running tests
 - Designed for ease of integration into any C project
+
+## Dependencies
+
+- logger: A simple and lightweight logger written in pure C
+- float_is_close: Compare floating-point numbers with a given tolerance in C
 
 ## Installation
 
@@ -14,6 +19,7 @@
    ```sh
    git clone https://github.com/teleprint-me/ccheck.c ccheck
    cd ccheck
+   git submodule update --init --recursive --remote
    ```
 
 2. Build the project using CMake:
