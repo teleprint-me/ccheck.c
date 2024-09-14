@@ -11,7 +11,7 @@ option(BUILD_SHARED_LIBS "Build using shared libraries" ON)
 
 # Setup submodule, module, and test names
 set(SUBMODULES logger float_is_close)
-set(MODULES test)
+set(MODULES ccheck)
 
 # Set the output directory for built binaries
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
