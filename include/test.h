@@ -23,8 +23,11 @@
 
 // @ref http://man7.org/linux/man-pages/man2/clock_gettime.2.html
 
-#define _POSIX_C_SOURCE   199309L
-#define __USE_POSIX199309 _POSIX_C_SOURCE
+#ifndef _POSIX_C_SOURCE
+    #define __USE_POSIX
+    #define _POSIX_C_SOURCE   199309L
+    #define __USE_POSIX199309 _POSIX_C_SOURCE
+#endif
 
 // Macros
 
