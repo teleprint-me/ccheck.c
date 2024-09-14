@@ -13,7 +13,20 @@
 
 #include <time.h>
 
-void test_case_run(test_case_t* test) {
+void test_result(test_meta_t* data) {
+    if (!data->state & TEST_PASSED) {
+        LOG_ERROR(
+            "%s failed: %s. Expected %p, got %p instead.\n",
+            data->name,
+            data->message,
+            data->expected,
+            data->actual
+        );
+    }
+    printf("%s", data->state & TEST_PASSED ? "." : "x");
+}
+
+void test_run(test_case_t* test) {
     struct timespec start, end;
     clock_gettime(CLOCK_MONOTONIC, &start);
 
