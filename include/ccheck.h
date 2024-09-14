@@ -114,13 +114,18 @@ typedef struct {
  * type, making it more concise and reducing redundancy throughout your
  * codebase.
  */
-int test_data_type_check(test_parameter_t* param, test_data_t expected_type);
+int test_type(test_parameter_t* param, test_data_t expected_type);
+
+/**
+ * @brief Log test results
+ */
+void test_result(test_meta_t* data);
 
 /**
  * @brief Runs a single test case within a custom suite by executing its
  * callback function with the supplied `test_meta_t`.
  */
-void test_case_run(test_case_t* test);
+void test_run(test_case_t* test);
 
 /**
  * @brief A simple lightweight test runner that sequentially executes all
@@ -128,6 +133,6 @@ void test_case_run(test_case_t* test);
  * test suite from one place instead of manually calling each individual test
  * case.
  */
-void test_suite_run(test_case_t* tests, uint32_t num_tests);
+void test_suite(test_case_t* tests, uint32_t num_tests);
 
 #endif // TEST_H
